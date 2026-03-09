@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Klinik Hewan Premium 24 Jam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#f59e0b', // Amber-500 (Kuning Tua)
+                        primaryLight: '#fef3c7', // Amber-50 (Kuning Sangat Muda)
+                        secondary: '#f97316', // Orange-500 (Jingga)
+                        secondaryLight: '#fff7ed', // Orange-50 (Jingga Sangat Muda)
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                        'float': '0 30px 60px -15px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <div
+                        class="w-10 h-10 bg-primaryLight rounded-xl flex items-center justify-center group-hover:bg-primary transition duration-300">
+                        <i
+                            class="fa-solid fa-paw text-primary group-hover:text-white text-xl transition duration-300"></i>
+                    </div>
+                    <span class="font-extrabold text-2xl text-slate-800 tracking-tight">Pet<span
+                            class="text-secondary">Care</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda"
+                        class="text-slate-600 hover:text-primary transition font-semibold text-sm uppercase tracking-wide">Beranda</a>
+                    <a href="#layanan"
+                        class="text-slate-600 hover:text-primary transition font-semibold text-sm uppercase tracking-wide">Layanan</a>
+                    <a href="#dokter"
+                        class="text-slate-600 hover:text-primary transition font-semibold text-sm uppercase tracking-wide">Tim
+                        Medis</a>
+                    <a href="#kontak"
+                        class="bg-slate-900 hover:bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-float hover:-translate-y-0.5">
+                        Buat Janji
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda"
+        class="relative bg-gradient-to-b from-primaryLight/50 to-slate-50 pt-32 pb-40 lg:pt-40 lg:pb-48 overflow-hidden">
+        <div
+            class="absolute top-20 left-10 w-64 h-64 bg-amber-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
+        </div>
+        <div
+            class="absolute top-40 right-10 w-72 h-72 bg-orange-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
+        </div>
+
+        <div
+            class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-16">
+            <div class="flex-1 text-center lg:text-left z-10">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primaryLight shadow-sm text-primary font-bold text-sm mb-6">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    Buka 24 Jam Non-Stop
+                </div>
+                <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-6 tracking-tight">
+                    Fasilitas Medis <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Terbaik
+                        untuk</span> Anabul
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Klinik hewan berstandar internasional dengan fasilitas <i>One Stop Service</i>. Karena sahabat
+                    berbulu Anda berhak mendapatkan perawatan kelas satu.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#kontak"
+                        class="bg-primary hover:bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-float hover:-translate-y-1 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-stethoscope"></i> Konsultasi Medis
+                    </a>
+                    <a href="https://wa.me/6281234567890" target="_blank"
+                        class="bg-white text-slate-700 border-2 border-slate-100 hover:border-primary hover:text-primary px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl text-green-500"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-1 relative z-10 w-full max-w-lg mx-auto lg:max-w-none">
+                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white">
+                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20250415/pngtree-veterinarian-examines-puppy-and-kitten-in-animal-clinic-caring-for-pets-image_17192699.jpg" alt="Interior Klinik Hewan PetCare"
+                        class="w-full h-[450px] object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-float border border-slate-50 flex items-center gap-4 animate-bounce"
+                    style="animation-duration: 3s;">
+                    <div
+                        class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary text-xl">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Dipercaya Oleh</p>
+                        <p class="text-xl font-extrabold text-slate-900">2,000+ <span
+                                class="text-sm font-medium text-slate-600">Pet Owners</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-20 -mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-[2rem] shadow-float p-8 lg:p-12 border border-slate-50">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                <div class="text-center px-4 pt-4 md:pt-0">
+                    <div
+                        class="w-14 h-14 bg-primaryLight text-primary rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl rotate-3 hover:rotate-0 transition">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900">One Stop Service</h3>
+                    <p class="text-sm text-slate-500">Semua kebutuhan medis & perawatan dalam satu atap.</p>
+                </div>
+                <div class="text-center px-4 pt-8 md:pt-0">
+                    <div
+                        class="w-14 h-14 bg-primaryLight text-primary rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl -rotate-3 hover:rotate-0 transition">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900">Dokter Spesialis</h3>
+                    <p class="text-sm text-slate-500">Ditangani langsung oleh tim dokter hewan berpengalaman.</p>
+                </div>
+                <div class="text-center px-4 pt-8 md:pt-0">
+                    <div
+                        class="w-14 h-14 bg-primaryLight text-primary rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl rotate-3 hover:rotate-0 transition">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900">Biaya Transparan</h3>
+                    <p class="text-sm text-slate-500">Estimasi biaya yang jelas di awal tanpa biaya tersembunyi.</p>
+                </div>
+                <div class="text-center px-4 pt-8 md:pt-0">
+                    <div
+                        class="w-14 h-14 bg-primaryLight text-primary rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl -rotate-3 hover:rotate-0 transition">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900">Layanan Darurat</h3>
+                    <p class="text-sm text-slate-500">Siaga 24/7 untuk kondisi kritis hewan kesayangan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-extrabold text-primary tracking-widest uppercase mb-3">Layanan Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">Perawatan Komprehensif
+                        <br />untuk Kesehatan Optimal</h3>
+                </div>
+                <p class="text-slate-500 font-medium md:text-right max-w-sm">Mulai dari pencegahan hingga operasi bedah,
+                    kami memiliki peralatan lengkap.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i
+                            class="fa-solid fa-syringe text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">Vaksinasi
+                        & Imunisasi</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">
+                        Pencegahan penyakit menular berbahaya melalui jadwal vaksinasi teratur yang disesuaikan.</p>
+                </div>
+
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i
+                            class="fa-solid fa-desktop text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">USG &
+                        X-Ray</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">
+                        Diagnostik pencitraan canggih untuk melihat organ dalam, kehamilan, dan deteksi dini penyakit.
+                    </p>
+                </div>
+
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i
+                            class="fa-solid fa-heart-pulse text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">Bedah
+                        Minor & Mayor</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">Ruang
+                        operasi steril dengan alat anestesi gas inhalasi untuk keamanan maksimal saat operasi.</p>
+                </div>
+
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i class="fa-solid fa-bed text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">Rawat
+                        Inap Eksklusif</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">Kandang
+                        isolasi dan non-isolasi dengan pemantauan ketat perawat dan dokter 24 jam.</p>
+                </div>
+
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i
+                            class="fa-solid fa-scissors text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">Pet Salon
+                        & Grooming</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">Mandi
+                        sehat, potong kuku, pembersihan telinga, dan *styling* bulu oleh *groomer* profesional.</p>
+                </div>
+
+                <div
+                    class="group bg-white p-8 rounded-[2rem] hover:bg-primary transition-all duration-300 shadow-soft border border-slate-100">
+                    <div
+                        class="w-16 h-16 bg-primaryLight group-hover:bg-secondary rounded-2xl flex items-center justify-center mb-6 transition-colors overflow-hidden relative">
+                        <i
+                            class="fa-solid fa-microchip text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">Microchip
+                        & Paspor</h4>
+                    <p class="text-slate-500 group-hover:text-white text-sm leading-relaxed transition-colors">
+                        Pemasangan identitas permanen dan pengurusan dokumen bagi yang ingin membawa hewan ke luar
+                        negeri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dokter" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-extrabold text-primary tracking-widest uppercase mb-3">Tim Spesialis</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Berkenalan dengan Dokter Kami</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="group relative rounded-3xl overflow-hidden bg-slate-50 cursor-pointer shadow-soft hover:shadow-float transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1594824432463-39ee6a9b4001?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Dokter Hewan"
+                        class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Kepala Veterinarian</p>
+                        <h4 class="font-bold text-xl text-white mb-3">Drh. Anisa Pertiwi</h4>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-primary backdrop-blur-sm"><i
+                                    class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-primary backdrop-blur-sm"><i
+                                    class="fa-brands fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative rounded-3xl overflow-hidden bg-slate-50 cursor-pointer shadow-soft hover:shadow-float transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Dokter Hewan"
+                        class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Ahli Bedah</p>
+                        <h4 class="font-bold text-xl text-white mb-3">Drh. Budi Santoso</h4>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-primary backdrop-blur-sm"><i
+                                    class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative rounded-3xl overflow-hidden bg-slate-50 cursor-pointer shadow-soft hover:shadow-float transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Dokter Hewan"
+                        class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Kardiologi Hewan</p>
+                        <h4 class="font-bold text-xl text-white mb-3">Drh. Citra Lestari</h4>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-primary backdrop-blur-sm"><i
+                                    class="fa-brands fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative rounded-3xl overflow-hidden bg-slate-50 cursor-pointer shadow-soft hover:shadow-float transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Dokter Hewan"
+                        class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-90">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Dokter Umum</p>
+                        <h4 class="font-bold text-xl text-white mb-3">Drh. Dimas Anggara</h4>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-primary backdrop-blur-sm"><i
+                                    class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-primaryLight/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-sm font-extrabold text-primary tracking-widest uppercase mb-3">Blog Edukasi</h2>
+                    <h3 class="text-3xl font-extrabold text-slate-900">Berita & Tips Terkini</h3>
+                </div>
+                <a href="#"
+                    class="hidden md:inline-flex items-center gap-2 font-bold text-primary hover:text-slate-900 transition underline">
+                    Lihat Semua Artikel <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-3xl overflow-hidden shadow-soft group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Kucing"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-xs font-bold text-primary">
+                            KESEHATAN</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-extrabold text-xl mb-3 text-slate-900 group-hover:text-primary transition-colors line-clamp-2">
+                            <a href="#">Waspada Penyakit Anemia pada Kucing Ras</a>
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-5 line-clamp-3 leading-relaxed">Pada era sekarang banyak
+                            masyarakat yang memelihara kucing. Namun perlu diwaspadai tanda-tanda anemia yang sering
+                            tidak disadari oleh pemilik...</p>
+                        <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                            <span class="text-xs font-bold text-slate-400">15 Sept 2026</span>
+                            <a href="#" class="text-sm font-bold text-primary hover:underline">Baca &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-3xl overflow-hidden shadow-soft group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Anjing"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-xs font-bold text-secondary">
+                            TIPS & TRIK</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-extrabold text-xl mb-3 text-slate-900 group-hover:text-primary transition-colors line-clamp-2">
+                            <a href="#">Bahaya Kutu Loncat Pada Hewan Peliharaan</a>
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-5 line-clamp-3 leading-relaxed">Halo pawmates! Kali ini kami
+                            berbagi informasi mengenai bahaya kutu loncat pada anjing dan kucing yang jika dibiarkan
+                            dapat menyebabkan masalah kulit serius...</p>
+                        <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                            <span class="text-xs font-bold text-slate-400">07 Sept 2026</span>
+                            <a href="#" class="text-sm font-bold text-primary hover:underline">Baca &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-3xl overflow-hidden shadow-soft group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1506556108154-159e1925bf09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Reptil"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-xs font-bold text-primary">
+                            EKSOTIS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-extrabold text-xl mb-3 text-slate-900 group-hover:text-primary transition-colors line-clamp-2">
+                            <a href="#">Metabolic Bone Disease (MBD) Pada Iguana</a>
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-5 line-clamp-3 leading-relaxed">Penyakit mematikan ini
+                            sering menyerang iguana dan kura-kura akibat kurangnya asupan kalsium serta paparan sinar
+                            matahari (UVB) yang tepat...</p>
+                        <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                            <span class="text-xs font-bold text-slate-400">01 Sept 2026</span>
+                            <a href="#" class="text-sm font-bold text-primary hover:underline">Baca &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-primary rounded-full filter blur-[100px] opacity-50"></div>
+        <div class="absolute -left-20 -bottom-20 w-72 h-72 bg-secondary rounded-full filter blur-[100px] opacity-30">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Butuh Penanganan Cepat?</h2>
+            <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">Tim medis darurat kami bersiaga 24/7. Hubungi kami
+                segera untuk menyelamatkan sahabat berbulu Anda.</p>
+            <a href="https://wa.me/6281234567890" target="_blank"
+                class="inline-flex items-center gap-3 bg-white text-slate-900 hover:bg-primary hover:text-white px-10 py-5 rounded-full font-extrabold text-lg transition-all duration-300 shadow-float hover:scale-105">
+                <i class="fa-solid fa-phone-volume text-xl"></i> Panggil Darurat: 0812-3456-7890
+            </a>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-white border-t border-slate-100 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 mb-16">
+                <div class="md:col-span-12 lg:col-span-5">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-paw text-primary text-3xl"></i>
+                        <span class="font-extrabold text-2xl text-slate-900">Pet<span class="text-secondary">Care</span>
+                            Clinic</span>
+                    </div>
+                    <p class="text-slate-500 leading-relaxed mb-8 max-w-sm">Klinik hewan terpercaya yang mengutamakan
+                        kenyamanan dan kesehatan sahabat berbulu Anda dengan teknologi medis terdepan.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-primary hover:text-white text-slate-600 transition duration-300 shadow-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-primary hover:text-white text-slate-600 transition duration-300 shadow-sm"><i
+                                class="fa-brands fa-facebook-f text-lg"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-primary hover:text-white text-slate-600 transition duration-300 shadow-sm"><i
+                                class="fa-brands fa-tiktok text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 lg:col-span-3">
+                    <h4 class="text-slate-900 font-extrabold text-lg mb-6">Eksplorasi</h4>
+                    <ul class="space-y-4 font-medium text-slate-500">
+                        <li><a href="#beranda" class="hover:text-primary transition">Beranda Utama</a></li>
+                        <li><a href="#layanan" class="hover:text-primary transition">Fasilitas & Layanan</a></li>
+                        <li><a href="#dokter" class="hover:text-primary transition">Profil Dokter</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Artikel & Edukasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-8 lg:col-span-4">
+                    <h4 class="text-slate-900 font-extrabold text-lg mb-6">Kunjungi Kami</h4>
+                    <ul class="space-y-5 font-medium text-slate-500">
+                        <li class="flex gap-4 items-start">
+                            <div
+                                class="w-10 h-10 bg-primaryLight text-primary rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i></div>
+                            <span class="mt-2">Jl. Pusat Kota No. 12, Surabaya, Jawa Timur, Indonesia</span>
+                        </li>
+                        <li class="flex gap-4 items-center">
+                            <div
+                                class="w-10 h-10 bg-primaryLight text-primary rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i></div>
+                            <span class="text-primary font-bold">BUKA 24 JAM SETIAP HARI</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-medium text-slate-500">
+                <p>&copy; 2026 PetCare Clinic. Dirancang dengan cinta untuk hewan.</p>
+                <div class="mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="hover:text-primary transition">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-primary transition">Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
